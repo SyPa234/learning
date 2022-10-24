@@ -1,0 +1,37 @@
+import time
+import random
+
+user = 0
+computer = 0
+
+while True:
+
+    x = input("Make your choice h = heads, t = tails, 0 = end: ")
+
+    if x == "0": break
+    elif x == "h": x = "heads"
+    elif x == "t": x = "tails"
+
+
+
+    y = random.choice(["heads", "tails"])
+
+    for i in range (0, 3):
+        print(3-i)
+        time.sleep(1)
+
+    print("Result: ", y)
+
+    if x == y:
+        user +=1
+        print("Congratulations! you win a point!")
+    else:
+        computer +=1
+        print("It failed to score. Try again.")
+
+    for i in range(0, 1):
+        print("The score will be shown in a moment \n" )
+        time.sleep(1)
+
+    print ("User: ", user)
+    print ("CPU: ", computer)
